@@ -1,0 +1,12 @@
+{% extends 'ticket/base.html' %}
+{% load static %}
+
+{% block content %}
+    <h2>Enter your ticket information here</h2>
+    <form method="post" class="ticket-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+
+    </form>
+{% endblock %}

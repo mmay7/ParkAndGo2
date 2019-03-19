@@ -1,0 +1,53 @@
+
+.page-header{
+    background-image: url(https://www.india.com/auto/wp-content/uploads/2016/12/a36db6228ef832fe2700b62deab0dd99__1.jpg);
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1450px;
+    position: relative;
+    opacity: 20%;
+
+    margin-top: 0px;
+    padding: 20px 20px 20px 40px;
+    color: #FFFFFF;
+}
+
+.page-header a:link{
+    color:white;
+}
+
+.ParkAndNo{
+    font-size: 100px;
+    text-align: center;
+}
+
+.home-and-login-button{
+    text-align: left;
+    color: white;
+}
+
+.content-container{
+    text-align: center;
+
+}
+
+.homePage p{
+    text-align: center;
+    background-image: url(https://thenypost.files.wordpress.com/2018/02/istock-171295467.jpg?quality=90&strip=all&w=618&h=410&crop=1);
+    display: inline-block;
+    padding: 95px;
+    background-color: #a0bbe5;
+    font-size: 50px;
+    color:white;
+
+}
+
+.tickets-for-list {
+   outline: 5px black;
+}
+
+
+.Add-without-account a:link{
+    color:black;
+}

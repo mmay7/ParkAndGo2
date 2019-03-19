@@ -1,0 +1,16 @@
+{% extends 'ticket/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% for tickets in tickets %}
+    <div class="ticket">
+
+        <h2>{{ ticket.ticket_number }}</h2>
+          <p>Name: {{ tickets.name }}</p>
+          <p>Meter: {{ tickets.meter_number }}</p>
+          <p>Street: {{ tickets.street }}</p>
+          <p>Meter: {{ tickets.date_and_time}}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+{% endblock %}
