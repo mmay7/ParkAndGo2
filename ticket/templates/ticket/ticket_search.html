@@ -1,0 +1,39 @@
+{% extends 'ticket/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<h1>Enter your meter number</h1>
+
+<br/>
+<form action="{% url 'ticket_search' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" meter_number="q" value="{{request.GET.q}}" placeholder="Search meters"/>
+<input type="submit" meter_number="submit" value="Search"/>
+</form>
+
+
+{% if submitbutton == 'Search' and request.GET.q != '' %}
+{% if results %}
+<h1>Results for <b>{{ request.GET.q }}</b></h1>
+<br/><br/>
+
+{% for result in results %}
+
+{{result.title}}
+<br/>
+
+{{result.content}}
+<br/>
+
+{% endfor %}
+{% else %}
+No search results for this query
+{% endif %}
+{% endif %}
+
+     <h1>Or find it on the map</h1>
+    <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
+
+{% endblock %}
+
