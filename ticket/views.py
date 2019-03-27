@@ -41,6 +41,7 @@ def ticket_search(request):
         if query is not None:
             lookups = Q(title__icontains=query) | Q(content__icontains=query)
 
+            #Ticket.objects.filter(meter_number = query)
             results = Ticket.objects.filter(lookups).distinct()
 
             context = {'results': results,
