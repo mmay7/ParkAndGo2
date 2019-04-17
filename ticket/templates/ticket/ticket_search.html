@@ -18,15 +18,26 @@ Search <input type="number" name="q" value="{{request.GET.q}}" placeholder="Sear
 <h1>Results for <b>{{ request.GET.q }}</b></h1>
 <br/><br/>
 
+    <h3>Total Tickets: {{ results.count }}</h3>
+    <br/>
+
+
+
+
 {% for result in results %}
 
-{{result.title}}
-<br/>
+{{result.name}}
+{{result.ticket_number}}
+{{result.meter_number}}
+{{result.street}}
+{{result.date}}
+{{result.time}}
 
-{{result.content}}
 <br/>
 
 {% endfor %}
+
+
 {% else %}
 No search results for this query
 {% endif %}

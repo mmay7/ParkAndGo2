@@ -38,14 +38,13 @@ def ticket_search(request):
 
         submitbutton = request.GET.get('submit')
 
-        if query is not None:
-            lookups = Q(title__icontains=query) | Q(content__icontains=query)
+        results = Ticket.objects.filter(meter_number=query)
 
-            #Ticket.objects.filter(meter_number = query)
-            results = Ticket.objects.filter(lookups).distinct()
+        if results is not None:
 
             context = {'results': results,
                      'submitbutton': submitbutton}
+
 
             return render(request, 'ticket/ticket_search.html', context)
 
@@ -54,3 +53,6 @@ def ticket_search(request):
 
     else:
         return render(request, 'ticket/ticket_search.html')
+
+
+
