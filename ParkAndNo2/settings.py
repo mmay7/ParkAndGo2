@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ticket',
     'maps',
+    'accounts.apps.AccountsConfig',
+    'Profile',
 ]
 
 MIDDLEWARE = [
