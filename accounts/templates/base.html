@@ -14,8 +14,7 @@
                     <p>Hi {{ user.username }}!</p>
                  <a href="{% url 'logout' %}">logout</a>
             {% else %}
-                <a href="{% url 'login' %}">login</a> or
-                    <a href="{% url 'signup' %}">signup</a>
+                <a href="{% url 'login' %}">login</a>
             {% endif %}
             </div>
             <div class="parkAndNo">
