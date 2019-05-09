@@ -55,4 +55,3 @@ def ticket_search(request):
         return render(request, 'ticket/ticket_search.html')
 
 
-

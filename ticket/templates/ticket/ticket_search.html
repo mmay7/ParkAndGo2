@@ -21,7 +21,29 @@ Search <input type="number" name="q" value="{{request.GET.q}}" placeholder="Sear
     <h3>Total Tickets: {{ results.count }}</h3>
     <br/>
 
-
+  <script src="https://code.highcharts.com/highcharts.src.js"></script>
+  <script>
+  {% for result in results %}
+  {{result.meter_number}}
+  {% endfor %}
+    Highcharts.chart('container', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Time Tickets were Given'
+        },
+        xAxis: {
+            categories: [
+                {% for result in results %}'{{ result.meter_number }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
+            ]
+        },
+        series: [{
+            name: 'Number of Tickets',
+            data: [1],
+        }]
+    });
+  </script>
 
 
 {% for result in results %}
@@ -45,6 +67,5 @@ No search results for this query
 
      <h1>Or find it on the map</h1>
     <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
-
 {% endblock %}
 
