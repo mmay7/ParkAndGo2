@@ -10,13 +10,17 @@
         <div class="page-header">
             <div class = "home-and-login-button">
                 <h3><a href = "/">Home</a></h3>
-
+                {% if user.is_authenticated %}
+                    <p>Hi {{ user.username }}!</p>
+                 <a href="{% url 'logout' %}">logout</a>
+            {% else %}
+                <a href="{% url 'login' %}">login</a>
+            {% endif %}
             </div>
             <div class="parkAndNo">
                 <p>ParkAndNo</p>
             </div>
         </div>
-
 
 
         </body>
