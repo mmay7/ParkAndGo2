@@ -1,0 +1,14 @@
+<html>
+    {% for profiles in profile %}
+    <div class="ticket">
+
+        <h2>{{ profiles.ticket_number }}</h2>
+          <p>Name: {{ profiles.name }}</p>
+          <p>Meter: {{ profiles.meter_number }}</p>
+          <p>Street: {{ profiles.street }}</p>
+          <p>Date: {{ profiles.date }}</p>
+          <p>Time: {{ profiles.time }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+</html>

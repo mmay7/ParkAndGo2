@@ -2,11 +2,17 @@
 {% load static %}
 
 {% block content %}
-    <h2>Enter your ticket information here</h2>
+    {% if user.is_authenticated %}
+         <h2>Enter your ticket information here</h2>
     <form method="post" class="ticket-form">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
+            {% else %}
+                <a href="{% url 'login' %}">login</a> or
+                    <a href="{% url 'signup' %}">signup</a> to add your ticket
+            {% endif %}
+
 
     </form>
 {% endblock %}

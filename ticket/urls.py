@@ -7,5 +7,4 @@ urlpatterns = [
     path('ticket/<int:pk>/', views.ticket_detail, name='ticket_detail'),
     path('ticket/search', views.ticket_search, name='ticket_search'),
     path('ticket/new', views.ticket_new, name='ticket_new'),
-
 ]

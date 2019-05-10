@@ -1,0 +1,12 @@
+<html>
+    {% if user.is_authenticated %}
+         <h2>Enter your profile information here</h2>
+    <form method="post" class="profile-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+            {% else %}
+                sorry bro, you can't
+            {% endif %}
+    </form>
+</html>

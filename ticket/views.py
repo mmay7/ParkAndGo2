@@ -4,8 +4,6 @@ from .forms import TicketForm
 from django.db.models import Q
 
 
-
-
 def ticket_home(request):
     return render(request, 'ticket/ticket_home.html')
 
