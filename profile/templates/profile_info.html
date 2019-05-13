@@ -1,0 +1,20 @@
+{% extends 'ticket/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    {% for profiles in profile %}
+    <div class="ticket">
+
+        <h2>{{ profiles.first_name }}</h2>
+          <p>Name: {{ profiles.last_name }}</p>
+          <p>Meter: {{ profiles.car }}</p>
+          <p>Street: {{ profiles.email_adress }}</p>
+          <p>Date: {{ profiles.home_address }}</p>
+          <p>Time: {{ profiles.phone_number }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+{% endblock %}

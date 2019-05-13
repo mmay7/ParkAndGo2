@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'ticket',
     'maps',
     'accounts.apps.AccountsConfig',
-    'Profile',
+    'profile',
 ]
 
 MIDDLEWARE = [
