@@ -1,9 +1,9 @@
  <!-- templates/signup.html -->
-{% extends 'base.html' %}
-
+{% extends 'ticket/base.html' %}
+{% block content %}
 {% block title %}Sign Up{% endblock %}
 
-{% block content %}
+
   <h2>Sign up</h2>
   <form method="post">
     {% csrf_token %}

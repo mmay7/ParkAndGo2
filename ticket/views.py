@@ -43,7 +43,6 @@ def ticket_search(request):
             context = {'results': results,
                      'submitbutton': submitbutton}
 
-
             return render(request, 'ticket/ticket_search.html', context)
 
         else:

@@ -1,0 +1,19 @@
+{% extends 'ticket/base.html' %}
+
+{% load static %}
+{% block content %}
+
+    {% for result in results %}
+    <div class="ticket">
+
+        <h2>{{ result.user }}</h2>
+          <p>Name: {{ result.first_name }} {{ result.last_name }}</p>
+          <p>Car: {{ result.car }}</p>
+          <p>Email: {{ result.email_address }}</p>
+          <p>Home Address: {{ result.home_address }}</p>
+          <p>PhoneNumber: {{ result.phone_number }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% endfor %}
+
+{% endblock %}
