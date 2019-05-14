@@ -24,7 +24,7 @@ def ticket_new(request):
         if form.is_valid():
             ticket = form.save(commit=False)
             ticket.save()
-        return redirect('ticket_detail', pk=ticket.pk)
+        return redirect('/')
     else:
         form = TicketForm()
     return render(request, 'ticket/ticket_edit.html', {'form': form})

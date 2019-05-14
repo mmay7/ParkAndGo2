@@ -13,11 +13,17 @@ def profile_new(request):
     if request.method == "POST":
         form = ProfileForm(request.POST)
         if form.is_valid():
-            # get the logged in user, save the
-            # fields, then saves the username from the user
-            profile = form.save(commit=False)
-            profile.username = request.user
-            profile.save()
+            user = request.user
+            first = form.cleaned_data['first_name']
+            last = form.cleaned_data['last_name']
+            car = form.cleaned_data['car']
+            email = form.cleaned_data['email_address']
+            home = form.cleaned_data['home_address']
+            phone = form.cleaned_data['phone_number']
+
+            profile = proFile.objects.create(user=user, first_name=first, last_name=last,
+            car=car, email_address=email, home_address=home, phone_number=phone)
+            profile.save
         return redirect('/')
     else:
         proFile.username = User.first_name

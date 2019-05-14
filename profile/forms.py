@@ -13,4 +13,4 @@ class ProfileForm(forms.ModelForm):
 
     class Meta:
         model = proFile
-        fields = ('user', 'first_name', 'last_name', 'car', 'email_address', 'home_address', 'phone_number')
+        fields = ('first_name', 'last_name', 'car', 'email_address', 'home_address', 'phone_number')
