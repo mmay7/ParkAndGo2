@@ -8,6 +8,10 @@ def ticket_home(request):
     return render(request, 'ticket/ticket_home.html')
 
 
+def about_us(request):
+    return render(request, 'ticket/about_us.html')
+
+
 def tickets_list(request):
     ticket = ticKet.objects.order_by('ticket_number')
     return render(request, 'ticket/tickets_list.html', {'ticket': ticket})

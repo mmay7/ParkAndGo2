@@ -1,23 +1,55 @@
 
-.page-header{
+.content-container{
+    text-align: center;
+    height: 150%;
+    align-content: center;
+    font-size: 25px;
+
+}
+
+.picture{
     background-image: url(https://www.india.com/auto/wp-content/uploads/2016/12/a36db6228ef832fe2700b62deab0dd99__1.jpg);
-    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 1450px;
-    position: relative;
+    background-size: cover;
+    height: 100%;
     opacity: 20%;
+    background-attachment: fixed;
 
     margin-top: 0px;
-    padding: 20px 20px 20px 40px;
     color: #FFFFFF;
 }
 
-.page-header a:link{
-    color:white;
+.picture{
+    text-align: center;
+}
+
+.header{
+    overflow: hidden;
+    background-color: #333;
+     position: fixed;
+    top: 0;
+    width: 100%;
+
+}
+
+.header a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.header a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .ParkAndNo{
+    padding-top: 200px;
     font-size: 100px;
     text-align: center;
 }
@@ -29,27 +61,30 @@
 }
 
 
-.content-container{
-    text-align: center;
-
+.homePage-title{
+    font-size: 75px;
+    background: #999999;
+    background-position: inherit;
+    color: black;
 }
 
-.homePage p{
-    text-align: center;
-    background-image: url(https://thenypost.files.wordpress.com/2018/02/istock-171295467.jpg?quality=90&strip=all&w=618&h=410&crop=1);
-    display: inline-block;
-    padding: 95px;
-    background-color: #a0bbe5;
-    font-size: 50px;
-    color:white;
-
+.homePage-title a{
+    color: black;
 }
 
-.tickets-for-list {
-   outline: 5px black;
+.homePage-text{
+    font-size: 30px;
+    font-color: black;
 }
 
+.footer{
 
-.Add-without-account a:link{
-    color:black;
+    position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #333;
+   color: white;
+   text-align: center;
 }
+

@@ -3,8 +3,22 @@
 
 {% block content %}
   <div class="homePage">
-      <p><a href= "ticket/new"> Add a Ticket</a></p>
-      <p><a href = "ticket/search">Search a Meter</a></p>
+    <div class="homePage-title">
+       <p><a href= "ticket/new"> Add a Ticket</a></p>
+    </div>
+      <div class="homePage-text">
+          <p>When you add a ticket to Park&No's database, you are not only adding more information to give you
+          a more accurate reading on if you will get a parking ticket, but you are also helping us take down this
+          large corporation. Don't just give your money to Park&Go, resist. Add your ticket here.</p>
+      </div>
+       <div class="homePage-title">
+        <p><a href = "ticket/search">Search a Meter</a></p>
+    </div>
+  <div class="homePage-text">
+          <p>Found yourself at a parking meter? Simply type in the number on the meter and have access to our database
+          of tickets. Here you can also access the map. The information is easy to read but it would be better if it was
+          a chart. Unfortunately I don't know Javascript. </p>
+      </div>
    </div>
 
 {% endblock %}

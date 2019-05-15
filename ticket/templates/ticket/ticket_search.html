@@ -18,55 +18,63 @@ Search <input type="number" name="q" value="{{request.GET.q}}" placeholder="Sear
 <h1>Results for <b>{{ request.GET.q }}</b></h1>
 <br/><br/>
 
+    <div class = search-page>
     <h3>Total Tickets: {{ results.count }}</h3>
     <br/>
 
             <h3>Monday</h3>
 {% for result in results %}
     {% if result.weekday == 0 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
             <h3>Tuesday</h3>
     {% for result in results %}
     {% if result.weekday == 1 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
             <h3>Wednesday</h3>
     {% for result in results %}
     {% if result.weekday == 2 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
             <h3>Thursday</h3>
     {% for result in results %}
     {% if result.weekday == 3 %}
-       {{ result.date }}       {{result.time}}<br>
+       {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
             <h3>Friday</h3>
     {% for result in results %}
     {% if result.weekday == 4 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
              <h3>Saturday</h3>
     {% for result in results %}
     {% if result.weekday == 5 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
             <h3>Sunday</h3>
     {% for result in results %}
     {% if result.weekday == 6 %}
-        {{ result.date }}       {{result.time}}<br>
+        {{ result.date }}
+        {{result.time}}<br>
         {% endif %}
     {% endfor %}
 
@@ -83,5 +91,8 @@ No search results for this query
      <h1>Or find it on the map</h1>
     <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
     {% endif %}
+
+    </div>
 {% endblock %}
+
 
