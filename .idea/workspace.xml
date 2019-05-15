@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adf0d29b-bb65-4a96-a41e-6fed73819db3" name="Default Changelist" comment="hi hi hi">
-      <change afterPath="$PROJECT_DIR$/ticket/templates/ticket/about_us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/static/css/ticket.css" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/static/css/ticket.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/ticket/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/ticket/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/ticket/ticket_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/ticket/ticket_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/templates/ticket/ticket_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/templates/ticket/ticket_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticket/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ticket/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,8 +77,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ticket/static/css/ticket.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="-821">
+              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -185,7 +177,6 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="45" />
-    <option name="y" value="5" />
     <option name="width" value="2145" />
     <option name="height" value="2075" />
   </component>
@@ -407,7 +398,7 @@
       <workItem from="1557432807144" duration="7049000" />
       <workItem from="1557510937505" duration="1405000" />
       <workItem from="1557513502343" duration="59030000" />
-      <workItem from="1557935469603" duration="8204000" />
+      <workItem from="1557935469603" duration="9223000" />
     </task>
     <task id="LOCAL-00001" summary="hi hi hi">
       <created>1553011470905</created>
@@ -427,7 +418,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120841000" />
+    <option name="totallyTimeSpent" value="121860000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -439,15 +430,14 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="18" y="2" width="858" height="830" extended-state="0" />
-    <editor active="true" />
+    <frame x="18" y="0" width="858" height="830" extended-state="1" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29625" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3241279" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49966466" visible="true" weight="0.37857142" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49966466" weight="0.37857142" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.34285715" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -456,8 +446,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.37759894" side_tool="true" weight="0.41584158" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.62240106" weight="0.31683168" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32658958" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.62240106" visible="true" weight="0.3157143" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3257143" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -865,8 +855,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ticket/static/css/ticket.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        <state relative-caret-position="-821">
+          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
         </state>
       </provider>
     </entry>
