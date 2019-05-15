@@ -21,43 +21,56 @@ Search <input type="number" name="q" value="{{request.GET.q}}" placeholder="Sear
     <h3>Total Tickets: {{ results.count }}</h3>
     <br/>
 
-  <script src="https://code.highcharts.com/highcharts.src.js"></script>
-  <script>
-  {% for result in results %}
-  {{result.meter_number}}
-  {% endfor %}
-    Highcharts.chart('container', {
-        chart: {
-            type: 'column'
-        },
-        title: {
-            text: 'Time Tickets were Given'
-        },
-        xAxis: {
-            categories: [
-                {% for result in results %}'{{ result.meter_number }} Class'{% if not forloop.last %}, {% endif %}{% endfor %}
-            ]
-        },
-        series: [{
-            name: 'Number of Tickets',
-            data: [1],
-        }]
-    });
-  </script>
-
-
+            <h3>Monday</h3>
 {% for result in results %}
+    {% if result.weekday == 0 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
 
-{{result.name}}
-{{result.ticket_number}}
-{{result.meter_number}}
-{{result.street}}
-{{result.date}}
-{{result.time}}
+            <h3>Tuesday</h3>
+    {% for result in results %}
+    {% if result.weekday == 1 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
+
+            <h3>Wednesday</h3>
+    {% for result in results %}
+    {% if result.weekday == 2 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
+
+            <h3>Thursday</h3>
+    {% for result in results %}
+    {% if result.weekday == 3 %}
+       {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
+
+            <h3>Friday</h3>
+    {% for result in results %}
+    {% if result.weekday == 4 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
+
+             <h3>Saturday</h3>
+    {% for result in results %}
+    {% if result.weekday == 5 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
+
+            <h3>Sunday</h3>
+    {% for result in results %}
+    {% if result.weekday == 6 %}
+        {{ result.date }}       {{result.time}}<br>
+        {% endif %}
+    {% endfor %}
 
 <br/>
-
-{% endfor %}
 
 
 {% else %}
@@ -65,7 +78,10 @@ No search results for this query
 {% endif %}
 {% endif %}
 
+    {% if results %}
+    {% else %}
      <h1>Or find it on the map</h1>
     <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
+    {% endif %}
 {% endblock %}
 

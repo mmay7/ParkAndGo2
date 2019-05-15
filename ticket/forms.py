@@ -1,10 +1,10 @@
 from django import forms
 
-from .models import Ticket
+from .models import ticKet
 
 
 class TicketForm(forms.ModelForm):
 
     class Meta:
-        model = Ticket
-        fields = ('name', 'ticket_number', 'meter_number', 'street', 'date', 'time')
+        model = ticKet
+        fields = ('ticket_number', 'meter_number', 'street', 'date', 'time')

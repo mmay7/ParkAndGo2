@@ -8,7 +8,6 @@
       {% for tickets in ticket %}
           <div class = "tickets-for-list">
           <h1><a href="{% url 'ticket_detail' pk=tickets.pk %}">{{ post.title }}</a></h1>
-          <p>Name: {{ tickets.name }}</p>
           <p>Meter: {{ tickets.meter_number }}</p>
           <p>Street: {{ tickets.street }}</p>
           <p>Date: {{ tickets.date}}</p>
