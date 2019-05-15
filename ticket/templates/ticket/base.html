@@ -11,7 +11,8 @@
     <div class = "header">
     <a href = "{% url 'ticket_home' %}">home</a>
         {% if user.is_authenticated %}
-                 <a href="{% url 'logout' %}">logout</a>
+            <a href="{% url 'logout' %}">logout</a>
+            <a href="{% url 'profile_search' %}">profile</a>
             {% else %}
             <a href="{% url 'login' %}">login</a> or
             <a href="{% url 'signup' %}">signup</a>
