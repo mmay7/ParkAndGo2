@@ -1,0 +1,38 @@
+{% extends 'ticket/base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+{% if results %}
+<h1>Results for <b>{{ request.GET }}</b></h1>
+<br/><br/>
+
+    <div class = search-page>
+    <h3>Total Tickets: {{ results.count }}</h3>
+    <br/>
+
+
+{% for result in results %}
+
+        {{ result.date }}
+        {{result.time}}<br>
+    {% endfor %}
+
+<br/>
+
+
+{% else %}
+No search results for this query
+{% endif %}
+
+
+    {% if results %}
+    {% else %}
+     <h1>Or find it on the map</h1>
+    <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
+    {% endif %}
+
+    </div>
+
+{% endblock %}

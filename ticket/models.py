@@ -18,3 +18,17 @@ class ticKet(models.Model):
 
     def __repr__(self):
         return repr(self.ticket_number)
+
+
+class search(models.Model):
+    weekday_word = models.CharField(max_length=200)
+    weekday_num = models.IntegerField()
+    meter_number = models.IntegerField()
+    start_date = models.DateField(default=timezone.now)
+    end_date = models.DateField(default=timezone.now)
+
+    def create_search(self):
+        self.save()
+
+    def __repr__(self):
+        return repr(self.meter_number)

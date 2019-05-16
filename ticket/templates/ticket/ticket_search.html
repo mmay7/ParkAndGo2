@@ -4,95 +4,11 @@
 {% block content %}
 
 
-<h1>Enter your meter number</h1>
+         <h2>Enter your information here</h2>
+    <form method="post" class="search-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Enter</button>
+    </form>
 
-<br/>
-<form action="{% url 'ticket_search' %}" method="GET" value="{{request.GET.q}}">
-Search <input type="number" name="q" value="{{request.GET.q}}" placeholder="Search meters"/>
-<input type="submit" name="submit" value="Search"/>
-</form>
-
-
-{% if submitbutton == 'Search' and request.GET.q != '' %}
-{% if results %}
-<h1>Results for <b>{{ request.GET.q }}</b></h1>
-<br/><br/>
-
-    <div class = search-page>
-    <h3>Total Tickets: {{ results.count }}</h3>
-    <br/>
-
-            <h3>Monday</h3>
-{% for result in results %}
-    {% if result.weekday == 0 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-            <h3>Tuesday</h3>
-    {% for result in results %}
-    {% if result.weekday == 1 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-            <h3>Wednesday</h3>
-    {% for result in results %}
-    {% if result.weekday == 2 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-            <h3>Thursday</h3>
-    {% for result in results %}
-    {% if result.weekday == 3 %}
-       {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-            <h3>Friday</h3>
-    {% for result in results %}
-    {% if result.weekday == 4 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-             <h3>Saturday</h3>
-    {% for result in results %}
-    {% if result.weekday == 5 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-            <h3>Sunday</h3>
-    {% for result in results %}
-    {% if result.weekday == 6 %}
-        {{ result.date }}
-        {{result.time}}<br>
-        {% endif %}
-    {% endfor %}
-
-<br/>
-
-
-{% else %}
-No search results for this query
-{% endif %}
-{% endif %}
-
-    {% if results %}
-    {% else %}
-     <h1>Or find it on the map</h1>
-    <p><a href = "http://127.0.0.1:8000/maps/">View Map</a></p>
-    {% endif %}
-
-    </div>
 {% endblock %}
-
-
