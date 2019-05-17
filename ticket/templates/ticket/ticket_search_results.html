@@ -2,7 +2,10 @@
 {% load static %}
 
 {% block content %}
-
+<head>
+<script src="https://unpkg.com/tlx/browser/tlx.js"></script>
+<script src="https://unpkg.com/tlx-chart/browser/tlx-chart.js"></script>
+</head>
 
 {% if results %}
 <br/><br/>
@@ -20,8 +23,26 @@
         Time: {{ result.time}}<br>
     {% endfor %}
 
+
 <br/>
 
+
+{#<tlx-chart chart-type="ColumnChart"#}
+{#  chart-columns="${['Element','Percentage']}"#}
+{#  chart-data="${[#}
+{#     ['6am',0.78],#}
+{#     ['7am',0.21],#}
+{#     ['8am',0.01],#}
+{#     ['9am',0.78],#}
+{#     ['10am',0.21],#}
+{#     ['11am',0.01],#}
+{#     ['12pm',0.78],#}
+{#     ['1pm',0.21],#}
+{#     ['2pm',0.01],#}
+{#     ['3pm',0.78],#}
+{#     ['4pm',0.21],#}
+{#     ['5pm',0.01],]}"#}
+{#</tlx-chart>#}
 
 {% else %}
 No search results for this query
