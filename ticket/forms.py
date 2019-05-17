@@ -14,4 +14,4 @@ class SearchForm(forms.ModelForm):
 
     class Meta:
         model = search
-        fields = ('weekday_word', 'meter_number', 'start_date', 'end_date')
+        fields = ('weekday', 'meter_number', 'start_date', 'end_date')

@@ -45,25 +45,25 @@ def ticket_search_create(request):
     if request.method == "POST":
         form = SearchForm(request.POST)
         if form.is_valid():
-            weekday_word = form.cleaned_data['weekday_word']
+            weekday = form.cleaned_data['weekday']
             meter_number = form.cleaned_data['meter_number']
             start_date = form.cleaned_data['start_date']
             end_date = form.cleaned_data['end_date']
-            if weekday_word == 'Monday':
+            if weekday == 'Monday':
                 weekday_num = 0
-            elif weekday_word == 'Tuesday':
+            elif weekday == 'Tuesday':
                 weekday_num = 1
-            elif weekday_word == 'Wednesday':
+            elif weekday == 'Wednesday':
                 weekday_num = 2
-            elif weekday_word == 'Thursday':
+            elif weekday == 'Thursday':
                 weekday_num = 3
-            elif weekday_word == 'Friday':
+            elif weekday == 'Friday':
                 weekday_num = 4
-            elif weekday_word == 'Saturday':
+            elif weekday == 'Saturday':
                 weekday_num = 5
             else:
                 weekday_num = 6
-            searchObject = search.objects.create(weekday_word=weekday_word, weekday_num=weekday_num,
+            searchObject = search.objects.create(weekday=weekday, weekday_num=weekday_num,
                                                  meter_number=meter_number, start_date=start_date, end_date=end_date)
             return ticket_search(request, searchObject)
     else:
@@ -73,11 +73,11 @@ def ticket_search_create(request):
 
 def ticket_search(request, search):
 
-        results = ticKet.objects.filter(meter_number=search.meter_number, weekday=search.weekday_num).order_by("time")
+        results = ticKet.objects.filter(meter_number=search.meter_number, weekday=search.weekday_num, date__range=[search.start_date, search.end_date]).order_by("time")
 
         if results is not None:
 
-            context = {'results': results}
+            context = {'results': results, 'search': search}
             return render(request, 'ticket/ticket_search_results.html', context)
 
         else:

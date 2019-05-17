@@ -21,7 +21,25 @@ class ticKet(models.Model):
 
 
 class search(models.Model):
-    weekday_word = models.CharField(max_length=200)
+    MONDAY = 'Monday'
+    TUESDAY = 'Tuesday'
+    WEDNESDAY = 'Wednesday'
+    THURSDAY = 'Thursday'
+    FRIDAY = 'Friday'
+    SATURDAY = 'Saturday'
+    WEEKDAY_CHOICES = [
+        (MONDAY, 'Monday'),
+        (TUESDAY, 'Tuesday'),
+        (WEDNESDAY, 'Wednesday'),
+        (THURSDAY, 'Thursday'),
+        (FRIDAY, 'Friday'),
+        (SATURDAY, 'Saturday'),
+    ]
+    weekday = models.CharField(
+        max_length=10,
+        choices=WEEKDAY_CHOICES,
+        default=MONDAY,
+    )
     weekday_num = models.IntegerField()
     meter_number = models.IntegerField()
     start_date = models.DateField(default=timezone.now)
