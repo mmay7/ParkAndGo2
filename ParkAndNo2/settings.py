@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'ticket',
     'maps',
     'accounts',
-    'profile',
+    'information',
 ]
 
 MIDDLEWARE = [
